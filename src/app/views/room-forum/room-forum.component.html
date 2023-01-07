@@ -1,0 +1,33 @@
+
+  <div>
+    <nav class="navbar navbar-light bg-primary">
+      <a class="navbar-brand mx-auto" href="/">Forum</a>
+    </nav>
+    <div class="container">
+      <div class="col-md-6 mt-4">
+        <div class="card">
+          <div class="card-header">
+            <h4> chateamos </h4>
+          </div>
+          <div class="card-body" *ngFor="let data of socketservice.bodychat">
+            <div class="card">
+             <div class="card-header">
+             <img class="image-circle m-4" [src]="data.img"><b>{{data.username}}</b>
+             </div>
+             <div id="chat" class="card-body">
+                 <p>{{data.message}}</p>
+             </div>
+         </div>
+         </div>
+          <form id="message-form" #messageForm class="card-footer">
+            <div class="input-group">
+              <input [(ngModel)]="message" [ngModelOptions]="{standalone : true}"type="text" id="message" class="form-control" />
+              <div class="input-group-append">
+                <input type="submit" (click)="sendmessage($event)" class="btn btn-warning" />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
