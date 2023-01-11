@@ -8,6 +8,7 @@ import { CookieService } from 'ngx-cookie-service';
 export class SockectService  {
 
   public bodychat : any[] = []
+  public contador  : number = 0
 
   outEven: EventEmitter<any> = new EventEmitter()
 
