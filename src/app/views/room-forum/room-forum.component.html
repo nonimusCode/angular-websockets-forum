@@ -6,8 +6,8 @@
     <div class="container">
       <div class="col-md-6 mt-4">
         <div class="card">
-          <div class="card-header">
-            <h4> chateamos </h4>
+          <div class="card-header d-flex justify-content-center tittles">
+            <h3> {{name_temaForo}} </h3>
           </div>
           <div class="card-body" *ngFor="let data of socketservice.bodychat">
             <div class="card">
@@ -15,8 +15,12 @@
              <img class="image-circle m-4" [src]="data.img"><b>{{data.username}}</b>
              </div>
              <div id="chat" class="card-body">
-                 <p>{{data.message}}</p>
+                 <p class="testmessagues">{{data.message}}</p>
+                 <div class="row-reverse">
+                   <p class="hour">{{data.hora_envio}}</p>
+                 </div>
              </div>
+
          </div>
          </div>
           <form id="message-form" #messageForm class="card-footer">

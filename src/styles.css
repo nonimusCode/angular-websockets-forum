@@ -1,8 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
 .card-header-sena-azul {
   background-color: blue;
+}
+
+.tittles {
+  font-family: "Cascadia Code";
+  color: green;
+  font-size: 4rem;
+}
+
+.hour {
+  font-family: "Cascadia Code";
+  color: darkgrey;
+  font-size: 13px;
+}
+
+.testmessagues {
+  font-family: "Cascadia Code";
+  font-size: 20px;
+}
+
+.row-reverse {
+  display: flex;
+  flex-direction: row-reverse;
 }

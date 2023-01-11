@@ -16,11 +16,11 @@ export class SockectService  {
   constructor(
     private cookie: CookieService,
     private socket: Socket) {
+
     this.listen()
   }
   listen() {
     this.socket.on('forward message' , (data : any ) => {
-      console.log(data);
       this.bodychat.push(data)
     })
   }
