@@ -13,28 +13,40 @@
 
 .inputmessages {
    font-family: "Cascadia Code" ;
-  background-color: #03366a ;
+  background-color: #095bc760 ;
   color: white;
+  border-radius: 15px;
+  width: 30px;
 }
 .image-circle-send{
   border-radius: 50%;
   width: 2rem;
   height: 2rem;
-  background-color: #03366a
+  background-color: #bac3cc
 }
 
 .chatIzaquierda {
   display: flex;
   flex-direction: row-reverse;
+
+  
 }
 
 
+.num1{
+	margin-right: 15px;
+	color: #def;
+}
 /* ++++++++++++++++++++++++++++++++ */
 
 
 
 
 .color1{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center; 
 	background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
 	border-radius: 10px;
@@ -204,11 +216,13 @@ border-radius: 1.125rem 1.125rem 1.125rem 0;
 background: rgb(2,0,36);
 background: #03366a;
 color: #f5f6fa;
+min-width:10%;
+max-width: 50%;
 padding: 10px;
 position: relative;
 
 }
-.msg_cotainer_send{
+.colorizquierda{
 margin-top: auto;
 margin-bottom: auto;
 margin-right: 10px;
@@ -220,6 +234,8 @@ position: relative;
 .msg_time{
 position: absolute;
 left: 0;
+margin-left: 10%;
+
 bottom: -15px;
 color: rgba(255,255,255,0.5);
 font-size: 10px;
@@ -248,3 +264,30 @@ font-size: 20px;
 margin-bottom: 15px !important;
 }
 }
+
+
+/* buton de enviar  */
+.btn-2 {
+	background: rgb(204, 204, 204);
+	background: linear-gradient(0deg, rgb(9, 32, 240) 0%, rgb(217, 214, 219) 100%);
+	border: none;
+height: 45px;
+	border-radius: 50%;
+	margin-left: 15px;
+	
+  }
+  .btn-2:before {
+	height: 0%;
+	width: 2px;
+  }
+ 
+  .img_enviar{
+	width: 35px;
+  }
+
+  .redondeado {
+	border-radius: 5px;
+  }
+  .confondo {
+	background-color: #def;
+  }
