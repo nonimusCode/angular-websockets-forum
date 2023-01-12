@@ -18,13 +18,13 @@
             </div>
             <div class="table-wrapper-scroll-y my-custom-scrollbar">
           <div  class="card-body msg_card_body" *ngFor="let data of socketservice.bodychat">
-            <div  [className]="data.user_id === idDelUsuario ? 'd-flex justify-content-start mb-4' : 'd-flex justify-content-start mb-4 chatIzaquierda'">
+            <div  [className]="data.user_id === idDelUsuario ? 'd-flex justify-content-start mb-4 chatIzaquierda' : 'd-flex justify-content-start mb-4 '">
              <div class="img_cont_msg">
              <img class="rounded-circle user_img_msg" [src]="data.img">
              <p class="username">{{data.username}}</p>
              </div>
-             <div id="chat" class="msg_cotainer ">
-                 <p class="">{{data.message}}</p>
+             <div id="chat" [className]="data.user_id === idDelUsuario ? 'msg_cotainer  colorizquierda' : 'msg_cotainer '">
+                 <p>{{data.message}}</p>
                  <div class="row-reverse">
                    <p class="msg_time">{{data.hora_envio}}</p>
                  </div>

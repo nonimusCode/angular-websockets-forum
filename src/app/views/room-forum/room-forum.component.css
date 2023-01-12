@@ -223,13 +223,7 @@ position: relative;
 
 }
 .colorizquierda{
-margin-top: auto;
-margin-bottom: auto;
-margin-right: 10px;
-border-radius: 25px;
 background-color: #78e08f;
-padding: 10px;
-position: relative;
 }
 .msg_time{
 position: absolute;
