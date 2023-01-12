@@ -32,6 +32,9 @@ export class RoomForumComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    
+    console.log(this.socketservice.bodychat);
+    console.log(console.log(localStorage.getItem("id_user")))
     this.room = this.activeRoute.snapshot.paramMap.get('room')
     this.id_foro = this.room.split('.')[0]
     this.name_temaForo = this.room.split('.')[1]
