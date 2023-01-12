@@ -19,6 +19,7 @@ export class RoomForumComponent implements OnInit {
   photo_path: any
   id_foro: string | number
   name_temaForo: string
+  idDelUsuario : string
 
   @ViewChild('messageForm') messageForm: ElementRef
   @ViewChild('chat') chat: ElementRef
@@ -32,9 +33,7 @@ export class RoomForumComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    
-    console.log(this.socketservice.bodychat);
-    console.log(console.log(localStorage.getItem("id_user")))
+    this.idDelUsuario = localStorage.getItem("id_user")
     this.room = this.activeRoute.snapshot.paramMap.get('room')
     this.id_foro = this.room.split('.')[0]
     this.name_temaForo = this.room.split('.')[1]
@@ -49,14 +48,16 @@ export class RoomForumComponent implements OnInit {
       const {status} = mesage
       if ( status === 'success' ) {
         for (let infomesague of mesage.results ){
-          const {message , name_user , photo , hora_envio} = infomesague
-          this.socketservice.bodychat.push({message , username :name_user  , img : photo , hora_envio})
+          const {message , name_user , photo , hora_envio , id_user} = infomesague
+          this.socketservice.bodychat.push({message , username :name_user  , img : photo , hora_envio , id_user})
         }
       }
     })
   }
 
   sendmessage(e: any) {
+    console.log("hola como estas ");
+
     this.messageForm.nativeElement.focus();
     e.preventDefault()
     const dataUsermessage = {

@@ -5,6 +5,29 @@
 }
 
 
+.username {
+  color: white !important;
+  font-family: "Cascadia Code" !important;
+  font-size: 10px !important;
+}
+
+.inputmessages {
+   font-family: "Cascadia Code" ;
+  background-color: #03366a ;
+  color: white;
+}
+.image-circle-send{
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  background-color: #03366a
+}
+
+.chatIzaquierda {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
 
 /* ++++++++++++++++++++++++++++++++ */
 
@@ -13,28 +36,28 @@
 
 .color1{
 	background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); 
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
 	border-radius: 10px;
 }
 
 
 
-/* ++++++++++++++++++++++++++++++++ 
+/* ++++++++++++++++++++++++++++++++
 */
 
 body,html{
 	height: 100%;
 	margin: 0;
-	
+
 		background: linear-gradient(135deg, #044f48, #2a7561);
 		background-size: cover;
 		font-family: 'Open Sans', sans-serif;
 		font-size: 12px;
 		line-height: 1.3;
 		overflow: hidden;
-		
 
-	  
+
+
 	/* background: #7F7FD5;
    background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
 	background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); */
@@ -42,7 +65,7 @@ body,html{
 .card-header{
 	border-radius: 15px 15px 0 0 !important;
 	border-bottom: 0 !important;
-	
+
 }
 
 .chat{
@@ -54,7 +77,7 @@ body,html{
 	height: auto;
 	border-radius: 15px !important;
 	background-color: rgba(0,0,0,0.4) !important;
-	
+
 }
 .contacts_body{
 	padding:  0.75rem 0 !important;
@@ -173,13 +196,13 @@ color: rgba(255,255,255,0.6);
 
 
 .msg_cotainer{
-	
+
 margin-top: auto;
 margin-bottom: auto;
 margin-left: 10px;
 border-radius: 1.125rem 1.125rem 1.125rem 0;
 background: rgb(2,0,36);
-background: #9FC9F3;
+background: #03366a;
 color: #f5f6fa;
 padding: 10px;
 position: relative;

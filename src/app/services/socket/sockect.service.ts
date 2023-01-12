@@ -22,7 +22,9 @@ export class SockectService  {
   }
   listen() {
     this.socket.on('forward message' , (data : any ) => {
+      console.log(data);
       this.bodychat.push(data)
+
     })
   }
   Emiter(payload: any) {
