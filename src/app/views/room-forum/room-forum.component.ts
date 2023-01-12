@@ -48,18 +48,17 @@ export class RoomForumComponent implements OnInit {
       const {status} = mesage
       if ( status === 'success' ) {
         for (let infomesague of mesage.results ){
-          const {message , name_user , photo , hora_envio , id_user} = infomesague
-          this.socketservice.bodychat.push({message , username :name_user  , img : photo , hora_envio , id_user})
+          const {message , name_user , photo , hora_envio , user_id} = infomesague
+          this.socketservice.bodychat.push({message , username :name_user  , img : photo , hora_envio , user_id})
         }
       }
     })
   }
 
   sendmessage(e: any) {
-    console.log("hola como estas ");
-
     this.messageForm.nativeElement.focus();
     e.preventDefault()
+   if(this.message !== ''){
     const dataUsermessage = {
       message: this.message,
       username: this.names_suername,
@@ -69,14 +68,13 @@ export class RoomForumComponent implements OnInit {
       forum_id: this.id_foro
     }
     this.socketservice.Emiter(dataUsermessage)
-
     this.message = ''
-  }
+   }
 
+  }
   getHourActual() {
     this.today = new Date()
     return this.today.toLocaleString().split(',')[1].toString()
   }
-
 
 }
