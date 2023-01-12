@@ -18,7 +18,7 @@
             </div>
             <div class="table-wrapper-scroll-y my-custom-scrollbar">
           <div  class="card-body msg_card_body" *ngFor="let data of socketservice.bodychat">
-            <div  [className]="data.id_user == idDelUsuario ? 'd-flex justify-content-start mb-4' : 'd-flex justify-content-start mb-4 chatIzaquierda'">
+            <div  [className]="data.user_id === idDelUsuario ? 'd-flex justify-content-start mb-4' : 'd-flex justify-content-start mb-4 chatIzaquierda'">
              <div class="img_cont_msg">
              <img class="rounded-circle user_img_msg" [src]="data.img">
              <p class="username">{{data.username}}</p>
